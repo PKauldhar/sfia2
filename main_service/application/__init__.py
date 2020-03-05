@@ -1,5 +1,5 @@
-#from flask_login import LoginManager
-#from flask import Flask
+from flask_login import LoginManager
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
 from flask_bcrypt import Bcrypt
