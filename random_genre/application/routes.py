@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request,Response
 from application import app, db
-#db
+from application.models import Movies, Users
 #from application.forms import favGenre
 import requests
 import random
