@@ -3,12 +3,12 @@ from flask_login import login_user, current_user, logout_user, login_required
 from application import app, db, bcrypt
 from application.models import Movies, Users
 from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie
-from requests import *
+import requests
 
 
 @app.route('/randomMovie')
 def randomMovie():
- random_genre=get('http://projects_random_genre_1:5000/randomGenre')
+ random_genre=requests.get('http://projects_random_genre_1:5000/randomGenre')
  #if form.validate_on_submit():
  #     currentuser = Users.query.filter_by(user_id=current_user.id).all()
  #     firstname = currentuser.firstname
