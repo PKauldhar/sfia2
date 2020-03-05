@@ -12,9 +12,9 @@ import random
 @app.route('/randomGenre')
 def get_randomMovie():
     genres_list=[]
-    movies = Movies.query.filter_by().all() 
+    movies = movies.query.filter_by().all() 
     for movie in movies:
-       genres_list.append(Movies.genre)
+       genres_list.append(movie.genre)
        genres_list = list(dict.fromkeys(genres_list)) #removes duplicates
 
     random_genre = random.choice(genres_list)
