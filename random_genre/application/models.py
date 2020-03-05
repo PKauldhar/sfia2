@@ -1,6 +1,5 @@
 
-from application import db, login_manager
-from flask_login import UserMixin
+from application import db
 from datetime import datetime
 
 #Test change for jenkins
