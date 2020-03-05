@@ -6,7 +6,7 @@ services:
      - target: 5000
        published: 5000
      environment:
-     - DATABASE_URI="mysql+pymysql://root:1234567@35.246.88.43/movies"
+     - DATABASE_URI=mysql+pymysql://root:1234567@35.246.88.43/movies
      - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'  
    random_genre:
      build: ./random_genre
@@ -14,5 +14,5 @@ services:
      - target: 5000
        published: 5001  
      environment:
-     - DATABASE_URI="mysql+pymysql://root:1234567@35.246.88.43/movies"
+     - DATABASE_URI=mysql+pymysql://root:1234567@35.246.88.43/movies
      - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
