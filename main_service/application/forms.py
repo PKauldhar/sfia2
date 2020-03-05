@@ -42,20 +42,6 @@ class addMovie(FlaskForm):
 
 class RegistrationForm(FlaskForm):
 
-    firstname = StringField('First Name:',
-        validators = [
-            DataRequired(),
-            Length(min=2, max=50)
-        ]
-    )
-
-    surname = StringField('Surname:',
-        validators = [
-            DataRequired(),
-            Length(min=2, max=50)
-        ]
-    )
-
     email = StringField('Email',
         validators = [
             DataRequired(),

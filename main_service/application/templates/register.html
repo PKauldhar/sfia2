@@ -6,24 +6,6 @@
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
             <div class='form_group'>
-                {{ form.firstname.label }}
-                {{ form.firstname }}
-                 {% if form.firstname.errors %}
-                    <div class='error'>
-                        {% for error in form.firstname.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-                {{ form.surname.label }}
-                {{ form.surname }}
-                  {% if form.surname.errors %}
-                    <div class='error'>
-                        {% for error in form.surname.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-                    </div>
-                {% endif %}
                 {{ form.email.label }}
                 {{ form.email }}
                 {% if form.email.errors %}
