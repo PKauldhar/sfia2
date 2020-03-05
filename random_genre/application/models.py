@@ -1,5 +1,6 @@
 
-
+from application import db, login_manager
+from flask_login import UserMixin
 from datetime import datetime
 
 #Test change for jenkins
@@ -27,7 +28,4 @@ class Movies(db.Model):
         user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
         def __repr__(self):
-            return ''.join(["User ID: ",self.user_id,"\r\n,""Title: ", self.title,"\r\n","Genre: ", self.genre,"Director:  ",self.director,"\r\n"$
-
-
-
+            return ''.join(["User ID: ",self.user_id,"\r\n,""Title: ", self.title,"\r\n","Genre: ", self.genre,"Director:  ",self.director,"\r\n","Rating: ",self.rating])
