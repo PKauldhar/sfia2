@@ -8,7 +8,8 @@ import requests
 
 @app.route('/randomMovie')
 def randomMovie():
- random_genre=requests.get('http://projects_random_genre_1:5000/randomGenre')
+ random_genre=requests.get('http://projects_random_genre_1:5000/randomGenre').text
+ movies_genre=Movies.query.filter_by(genre=random_genre).all()
  #if form.validate_on_submit():
  #     currentuser = Users.query.filter_by(user_id=current_user.id).all()
  #     firstname = currentuser.firstname
