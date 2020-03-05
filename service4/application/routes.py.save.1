@@ -1,0 +1,16 @@
+from flask import render_template, redirect, url_for, request, Response
+from application import app
+#db
+#from application.forms import favGenre
+import requests
+
+
+@app.route('/helloworld')
+def get_helloworld():
+    return {"data": "HelloWorld"}
+
+
+@app.route('/randomMovie')
+def randomMovie():
+    firstname
+    lastname
