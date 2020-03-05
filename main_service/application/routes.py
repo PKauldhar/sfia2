@@ -2,20 +2,20 @@ from flask import render_template, redirect, url_for, request
 from flask_login import login_user, current_user, logout_user, login_required
 from application import app, db, bcrypt
 from application.models import Movies, Users
-from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie,favGenre
+from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie
 from requests import *
 
 
 @app.route('/randomMovie')
-def get_randomMovie():
- form= Random()
- if form.validate_on_submit():
-      currentuser = Users.query.filter_by(user_id=current_user.id).all()
-      firstname = currentuser.firstname
-      lastname = currentuser.lastname
-      posting = post('http://projects_flask-app-service2_1:5000/randomMovie', firstname, lastname)
-      return str(posting)
- return render_template('randomMovie.html', title='randomMovie', random=form)
+def randomMovie():
+ random_genre=get('http://projects_random_genre_1:5000/randomGenre')
+ #if form.validate_on_submit():
+ #     currentuser = Users.query.filter_by(user_id=current_user.id).all()
+ #     firstname = currentuser.firstname
+ #     lastname = currentuser.lastname
+ #     posting = post('http://projects_flask-app-service2_1:5000/randomMovie', firstname, lastname)
+ #     return str(posting)
+ return render_template('randomMovie.html', title='randomMovie', random=random_genre)
 
 
 
