@@ -50,12 +50,13 @@ def home():
 def randomMovie():
     currentuser=str(current_user.id)
     print(5555555555555555555555)
-    rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
+    rg=requests.post('http://random_genre:5000/randomGenre',currentuser)
+    #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
     print(66666666666666666666666666)
     random_genre=rg.text
     #movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
-    rd=requests.post('http://projects_random_director_1:5000/randomDirector',currentuser)
+    rd=requests.post('http://random_director:5000/randomDirector',currentuser)
     random_director=rd.text
     #movies_director=Movies.query.filter_by(user_id=current_user.id, director=random_director).all()
 
