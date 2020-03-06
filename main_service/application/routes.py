@@ -5,7 +5,8 @@ from application.models import Movies, Users
 from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie
 import requests
 
-@app.route('/randomMovie')
+@app.route('/randomMovie', methods=['GET', 'POST'])
+@login_required
 def randomMovie():
  rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
  random_genre=rg.text
