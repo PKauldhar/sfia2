@@ -11,15 +11,11 @@ def randomMovie():
  random_genre=rg.text
  movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
- return render_template('randomMovie.html', title='randomMovie', random=random_genre)
-
-@app.route('/randomDirector')
-def randomDirector():
  rd=requests.get('http://projects_random_director_1:5000/randomDirector')
  random_director=rd.text
  movies_director=Movies.query.filter_by(user_id=current_user.id, director=random_director).all()
 
- return render_template('randomMovie.html', title='randomMovie', randomdirector=random_director)
+ return render_template('randomMovie.html', title='randomMovie', random=random_genre, ranDir=random_director)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
