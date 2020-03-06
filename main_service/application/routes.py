@@ -5,18 +5,9 @@ from application.models import Movies, Users
 from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie
 import requests
 
-@login_required
-@app.route('/randomMovie', methods=['GET', 'POST'])
-def randomMovie():
- rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
- random_genre=rg.text
- movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
- rd=requests.get('http://projects_random_director_1:5000/randomDirector')
- random_director=rd.text
- movies_director=Movies.query.filter_by(user_id=current_user.id, director=random_director).all()
 
- return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director)
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -49,7 +40,35 @@ def login():
 @app.route('/')
 @app.route('/home')
 def home():
-	return render_template('home.html', title='Home')
+    return render_template('home.html', title='Home')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@login_required
+@app.route('/randomMovie', methods=['GET', 'POST'])
+def randomMovie():
+ rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
+ random_genre=rg.text
+ movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
+
+ rd=requests.get('http://projects_random_director_1:5000/randomDirector')
+ random_director=rd.text
+ movies_director=Movies.query.filter_by(user_id=current_user.id, director=random_director).all()
+
+ return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director)
 
 
 
