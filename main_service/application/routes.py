@@ -60,7 +60,10 @@ def randomMovie():
 
 
 
-
+@app.route('/id')
+def id():
+    user=current_user
+    return render_template('id.html', user=user)
 
 @app.route('/movies', methods=['GET', 'POST'])
 def movies():
