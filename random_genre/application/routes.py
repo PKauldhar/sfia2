@@ -12,7 +12,7 @@ import random
 @app.route('/randomGenre')
 def get_randomMovie():
     genres_list=[]
-    movies=Movies.query.all()
+    movies=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
     for movie in movies:
        genres_list.append(movie.genre)
        genres_list = list(dict.fromkeys(genres_list)) #removes duplicates

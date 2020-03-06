@@ -51,8 +51,9 @@ def home():
 	return render_template('home.html', title='Home')
 
 
-@login_required
+
 @app.route('/movies', methods=['GET', 'POST'])
+@login_required
 def movies():
     movies = Movies.query.filter_by(user_id=current_user.id).all()
     return render_template('movies.html', title='Movies', movies=movies)
