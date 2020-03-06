@@ -38,12 +38,10 @@ def get_randomDirector():
     if not movies:
      return "empty"
     else:
-     for movie in movies:
-       director_list.append(movie.director)
-       director_list = list(dict.fromkeys(director_list)) #removes duplicates
+		for movie in movies:
+			director_list.append(movie.director)
+			director_list = list(dict.fromkeys(director_list)) #removes duplicates
 
-    random_director = random.choice(director_list)
-  
-
-    return random_director
+	random_director = random.choice(director_list)
+	return random_director
 #	return "hi"
