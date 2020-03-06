@@ -14,7 +14,8 @@ import random
 def get_randomMovie():
     genres_list=[]
     print(11111111111111111111111111111111111111111111111)
-    user=request.data.decode("utf-8")
+    userid=request.data.decode("utf-8")
+    user=int(userid)
     movies=Movies.query.filter_by(user_id=user, genre=random_genre).all()
     print(44444444444444444444444444444444444)
     for movie in movies:

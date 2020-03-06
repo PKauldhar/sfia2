@@ -14,7 +14,8 @@ import random
 def get_randomDirector():
     director_list=[]
     print(22222222222222222222222222222222)
-    user=request.data.decode("utf-8")
+    userid=request.data.decode("utf-8")
+    user=int(userid)
     movies=Movies.query.filter_by(user_id=user, genre=random_genre).all()
     print(33333333333333333333333333333333)
     for movie in movies:
