@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request,Response
 from application import app, db
 from application.models import Movies, Users
-#from application.forms import favGenre
+
 import requests
 import random
 
@@ -18,6 +18,6 @@ def get_randomDirector():
        director_list = list(dict.fromkeys(director_list)) #removes duplicates
 
     random_director = random.choice(director_list)
-    #print(random_genre)
+
     return random_director
 #	return "hi"
