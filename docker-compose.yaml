@@ -16,3 +16,11 @@ services:
      environment:
      - DATABASE_URI=mysql+pymysql://root:1234567@35.246.88.43/movies
      - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
+   random_genre:
+     build: ./random_genre
+     ports:
+     - target: 5000
+       published: 5002 
+     environment:
+     - DATABASE_URI=mysql+pymysql://root:1234567@35.246.88.43/movies
+     - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'

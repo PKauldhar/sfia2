@@ -11,15 +11,16 @@ def randomMovie():
  rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
  random_genre=rg.text
  movies_genre=Movies.query.filter_by(genre=random_genre).all()
- #if form.validate_on_submit():
- #     currentuser = Users.query.filter_by(user_id=current_user.id).all()
- #     firstname = currentuser.firstname
- #     lastname = currentuser.lastname
- #     posting = post('http://projects_flask-app-service2_1:5000/randomMovie', firstname, lastname)
- #     return str(posting)
+
  return render_template('randomMovie.html', title='randomMovie', random=random_genre)
 
+@app.route('/randomDirector')
+def randomDirector():
+ rd=requests.get('http://projects_random_director_1:5000/randomDirector')
+ random_director=rd.text
+ movies_genre=Movies.query.filter_by(director=random_director).all()
 
+ return render_template('randomMovie.html', title='randomMovie', randomdirector= random_director)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
