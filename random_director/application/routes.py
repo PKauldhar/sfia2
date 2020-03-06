@@ -18,20 +18,16 @@ def get_randomDirector():
     user=int(userid)
     movies=Movies.query.filter_by(user_id=user).all()
     print(33333333333333333333333333333333)
-    
-
-
-
-
-    if not movies:
-    	return "empty"
-    else:
-     for movie in movies:
-     director_list.append(movie.director)
-     director_list = list(dict.fromkeys(director_list)) #removes duplicates
+    for movie in movies:
+       director_list.append(movie.director)
+       director_list = list(dict.fromkeys(director_list)) #removes duplicates
 
     random_director = random.choice(director_list)
-    	
+
+
+
+
+    
 
     return random_director
 #	return "hi"
