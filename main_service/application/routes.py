@@ -49,7 +49,9 @@ def home():
 @login_required
 def randomMovie():
     currentuser=current_user.id
+    print(5555555555555555555555)
     rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
+    print(66666666666666666666666666)
     random_genre=rg.text
     #movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
