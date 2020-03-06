@@ -35,7 +35,7 @@ class addMovie(FlaskForm):
     submit = SubmitField('Post!')
 
     def validate_title(self, title):
-        movie = Movies.query.filter_by(title=title.data).first()
+        movie = Movies.query.filter_by(user_id=current_user.id,title=title.data).first()
 
         if movie:
            raise ValidationError('Duplicate Movie')
