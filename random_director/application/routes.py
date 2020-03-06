@@ -10,7 +10,7 @@ import random
 #def get_helloworld():
  #   return {"data": "HelloWorld"}
 
-@app.route('/randomDirector')
+@app.route('/randomDirector', methods=['GET', 'POST'])
 def get_randomDirector():
     director_list=[]
     print(22222222222222222222222222222222)

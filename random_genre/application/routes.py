@@ -10,7 +10,7 @@ import random
 #def get_helloworld():
  #   return {"data": "HelloWorld"}
 
-@app.route('/randomGenre')
+@app.route('/randomGenre', methods=['GET', 'POST'])
 def get_randomMovie():
     genres_list=[]
     print(11111111111111111111111111111111111111111111111)
