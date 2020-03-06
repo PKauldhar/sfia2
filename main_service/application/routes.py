@@ -64,6 +64,8 @@ def randomMovie():
 
 @app.route('/movies', methods=['GET', 'POST'])
 def movies():
+    if not current_user.is_authenticated:
+        return redirect(url_for('home'))
     movies = Movies.query.filter_by(user_id=current_user.id).all()
     return render_template('movies.html', title='Movies', movies=movies)
 
