@@ -10,8 +10,8 @@ import random
 #def get_helloworld():
  #   return {"data": "HelloWorld"}
 
-@app.route('/randomGenre', methods=['GET', 'POST'])
-def get_randomMovie():
+@app.route('/randomDirector', methods=['GET', 'POST'])
+def get_randomDirector():
     director_list=[]
     print(11111111111111111111111111111111111111111111111)
     userid=request.data.decode("utf-8")
