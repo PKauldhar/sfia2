@@ -45,20 +45,8 @@ def home():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-@login_required
 @app.route('/randomMovie', methods=['GET', 'POST'])
+@login_required
 def randomMovie():
  rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
  random_genre=rg.text
@@ -72,8 +60,9 @@ def randomMovie():
 
 
 
-@app.route('/movies', methods=['GET', 'POST'])
 
+
+@app.route('/movies', methods=['GET', 'POST'])
 def movies():
     movies = Movies.query.filter_by(user_id=current_user.id).all()
     return render_template('movies.html', title='Movies', movies=movies)
