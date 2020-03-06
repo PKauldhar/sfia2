@@ -18,11 +18,12 @@ def get_randomMovie():
     user=int(userid)
     movies=Movies.query.filter_by(user_id=user).all()
     print(44444444444444444444444444444444444)
-    for movie in movies:
-       genres_list.append(movie.genre)
-       genres_list = list(dict.fromkeys(genres_list)) #removes duplicates
-
-    random_genre = random.choice(genres_list)
-    
-    return random_genre
+    if not movies:
+    	return "empty"
+    else:
+    	for movie in movies:
+    		genres_list.append(movie.genre)
+    		genres_list = list(dict.fromkeys(genres_list)) #removes duplicates
+    	random_genre = random.choice(genres_list)
+    	return random_genre
 #	return "hi"
