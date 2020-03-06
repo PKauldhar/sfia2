@@ -42,10 +42,19 @@
   {% endif  %}
 -->
 <p>random genre
+{% if random %}
 {{random}}
+{% else %}
+<p>There are no movies broo!</p>
+{% endif %}
 </p>
 <p>random director
+{% if randDir %}
 {{randDir}}
+{% else %}
+<p>There are no movies broo!</p>
+{% endif %}
+
 </p>
 
 {% endblock page_content %}
