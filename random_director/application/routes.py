@@ -10,21 +10,19 @@ import random
 #def get_helloworld():
  #   return {"data": "HelloWorld"}
 
-@app.route('/randomDirector', methods=['GET', 'POST'])
-def get_randomDirector():
+@app.route('/randomGenre', methods=['GET', 'POST'])
+def get_randomMovie():
     director_list=[]
-    print(22222222222222222222222222222222)
+    print(11111111111111111111111111111111111111111111111)
     userid=request.data.decode("utf-8")
     user=int(userid)
     movies=Movies.query.filter_by(user_id=user).all()
-    print(33333333333333333333333333333333)
+    print(44444444444444444444444444444444444)
     for movie in movies:
        director_list.append(movie.director)
        director_list = list(dict.fromkeys(director_list)) #removes duplicates
-
+    
     random_director = random.choice(director_list)
 
-
-
-	return random_director
+    return random_director
 #	return "hi"
