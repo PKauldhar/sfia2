@@ -5,9 +5,6 @@ from application.models import Movies, Users
 from application.forms import addMovie, RegistrationForm, LoginForm, EmailChange, updateMovie, delete_Movie
 import requests
 
-
-<<<<<<< HEAD
-=======
 @app.route('/randomMovie')
 def randomMovie():
  rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
@@ -24,7 +21,6 @@ def randomDirector():
 
  return render_template('randomMovie.html', title='randomMovie', randomdirector=random_director)
 
->>>>>>> c5da260f65513e6f75dfd056954eac859572cf86
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
