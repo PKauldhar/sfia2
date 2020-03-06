@@ -10,7 +10,7 @@
 <a href="{{ url_for('update') }}"><button>Update Movie</button></a>
 <a href="{{ url_for('deleteMovie') }}"><button>Delete Movie</button></a>
 <a href="{{ url_for('randomMovie') }}"><button>Random Movie</button></a>
-</br>
+
 <br>
 
 
@@ -41,22 +41,22 @@
 
   {% endif  %}
 -->
-<p>random genre
+<p>random genre</p>
 {% if random %}
 {{random}}
 {% else %}
 <p>There are no movies broo!</p>
 {% endif %}
-</p>
-<p>random director
+
+<p>random director</p>
 {% if randDir %}
 {{randDir}}
 {% else %}
 <p>There are no movies broo!</p>
 {% endif %}
 
-</p>
+
 
 {% endblock page_content %}
-</br>   
+ 
 </html>
