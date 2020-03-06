@@ -15,7 +15,7 @@ def randomMovie():
  random_director=rd.text
  movies_director=Movies.query.filter_by(user_id=current_user.id, director=random_director).all()
 
- return render_template('randomMovie.html', title='randomMovie', random=random_genre, ranDir=random_director)
+ return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
