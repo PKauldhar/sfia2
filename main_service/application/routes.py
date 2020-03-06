@@ -112,21 +112,7 @@ def deleteMovie():
     return render_template('deleteMovie.html', title='Delete', form=form)
 
 
-@app.route('/randomMovie')
-def randomMovie():
- rg=requests.get('http://projects_random_genre_1:5000/randomGenre')
- random_genre=rg.text
- movies_genre=Movies.query.filter_by(genre=random_genre).all()
 
- return render_template('randomMovie.html', title='randomMovie', random=random_genre)
-
-@app.route('/randomDirector')
-def randomDirector():
- rd=requests.get('http://projects_random_director_1:5000/randomDirector')
- random_director=rd.text
- movies_director=Movies.query.filter_by(director=random_director).all()
-
- return render_template('randomMovie.html', title='randomMovie', randDir=random_director)
 
 
 @app.route("/account", methods=['GET', 'POST'])
