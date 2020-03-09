@@ -48,22 +48,11 @@ def home():
 @app.route('/randomMovie', methods=['GET', 'POST'])
 @login_required
 def randomMovie():
-    currentuser=str(current_user.id)
-
-    rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
-    #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
-    random_genre=rg.text
-    #movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
-
-    rd=requests.post('http://projects_random_director_1:5000/randomDirector',currentuser)
-    random_director=rd.text
-    random_movies=Movies.query.filter_by(user_id=currentuser, director=random_director, genre=random_genre ).all()
-    #records = session.query(Movies).filter(movie.director == 'rd').all()
-    #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
+  
+    random_movies=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
 
 
-
-    return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director, randommovies=random_movies)
+    return render_template('randomMovie.html', title='randomMovie', randommovies=random_movies)
 
 
 
