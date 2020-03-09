@@ -65,7 +65,7 @@ def randomMovie():
 
 
 
-    return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director)
+    return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director, randommovie=random_movie)
 
 
 
