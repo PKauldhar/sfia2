@@ -49,7 +49,7 @@ def home():
 @login_required
 def randomMovie():
     currentuser=str(current_user.id)
-    
+
     rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
     #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
     random_genre=rg.text
@@ -58,7 +58,6 @@ def randomMovie():
     rd=requests.post('http://projects_random_director_1:5000/randomDirector',currentuser)
     random_director=rd.text
     random_movie=Movies.query.filter_by(user_id=currentuser, director=random_director, genre=random_genre ).all()
-    print(random_movie.movie)
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
 
