@@ -12,7 +12,9 @@ import random
 
 @app.route('/randomMaster', methods=['GET', 'POST'])
 def get_randomMaster():
-    #current_user=str(request.data.decode("utf-8"))
+    current_user=int(request.data.decode("utf-8"))
+    print("11")
+    print(current_user)
     print("12")
     print(str(request.data.decode("utf-8")))
     print("13")
