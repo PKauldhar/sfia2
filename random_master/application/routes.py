@@ -12,7 +12,7 @@ import random
 
 @app.route('/randomMaster', methods=['GET', 'POST'])
 def get_randomMaster():
-    current_user=request.data.decode("utf-8")
+    current_user=str(request.data.decode("utf-8"))
     #print(current_user)
     #print(str(request.data.decode("utf-8")))]#
 
@@ -41,4 +41,4 @@ def get_randomMaster():
     
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
-#	return "hi"
+    #return "hi"
