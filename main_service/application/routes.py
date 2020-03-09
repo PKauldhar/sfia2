@@ -51,9 +51,9 @@ def randomMovie():
     currentuser=str(current_user.id)
     random_movies=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
     #random_movies=str(random_movies.text).split(",")
-    random_movies=str(random_movies.text).split(",")
-    random_movies2=str(random_movies.text).split(",").strip()
-    print(random_movies)
+    #random_movies=str(random_movies.text).split(",")
+    random_movies2=random_movies.strip()
+   # print(random_movies)
     print(random_movies2)
     return render_template('randomMovie.html', title='randomMovie', randommovies=random_movies)
 
