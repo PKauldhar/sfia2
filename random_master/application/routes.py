@@ -22,12 +22,12 @@ def get_randomMaster():
     #currentuser=str(current_user.id)
     rg=requests.post('http://projects_random_genre_1:5000/randomGenre',current_user)
     #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
-    random_genre=rg.text
+    random_genre=str(rg.text)
     print(random_genre)
     #movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
     rd=requests.post('http://projects_random_director_1:5000/randomDirector',current_user)
-    random_director=rd.text
+    random_director=str(rd.text)
     print(random_director)
     #random_movies=Movies.query.filter_by(user_id=current_user, director=random_director, genre=random_genre ).all()
     randomised = {'genre': random_genre, 'director': random_director}

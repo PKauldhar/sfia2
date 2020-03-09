@@ -51,7 +51,7 @@ def randomMovie():
     currentuser=str(current_user.id)
     random_movies=requests.get('http://projects_random_master_1:5000/randomMaster',currentuser)
     resultrandom_movies=Movies.query.filter_by(user_id=current_user, director=random_movies['director'], genre=random_movies['genre']).all()
-    return render_template('randomMovie.html', title='randomMovie', randommovies=random_movies)
+    return render_template('randomMovie.html', title='randomMovie', randommovies= resultrandom_movies)
 
 
 
