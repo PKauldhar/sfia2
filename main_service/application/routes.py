@@ -49,7 +49,11 @@ def home():
 @login_required
 def randomMovie():
     currentuser=str(current_user.id)
-    random_movie=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
+    randy=str(requests.post('http://projects_random_master_1:5000/randomMaster',currentuser).text)
+
+    randy = random_movie.split(",") 
+    random_movie = randy[0]
+
     #resultrandom_movies=Movies.query.filter_by(user_id=current_user, director=random_movies['director'], genre=random_movies['genre']).all()
     return render_template('randomMovie.html', title='randomMovie', randommovie= random_movie)
 
