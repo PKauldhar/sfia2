@@ -48,10 +48,9 @@ def home():
 @app.route('/randomMovie', methods=['GET', 'POST'])
 @login_required
 def randomMovie():
-   # currentuser=int(current_user.id)
-    random_movies=requests.post('http://projects_random_master_1:5000/randomMaster',current_user.id)
-
-
+    currentuser=str(current_user.id)
+    random_movies=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
+    
     return render_template('randomMovie.html', title='randomMovie', randommovies=random_movies)
 
 
