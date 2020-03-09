@@ -13,11 +13,9 @@ import random
 @app.route('/randomDirector', methods=['GET', 'POST'])
 def get_randomDirector():
     director_list=[]
-    print(11111111111111111111111111111111111111111111111)
     userid=request.data.decode("utf-8")
     user=int(userid)
     movies=Movies.query.filter_by(user_id=user).all()
-    print(44444444444444444444444444444444444)
     for movie in movies:
        director_list.append(movie.director)
        director_list = list(dict.fromkeys(director_list)) #removes duplicates
