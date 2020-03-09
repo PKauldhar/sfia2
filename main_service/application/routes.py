@@ -49,13 +49,13 @@ def home():
 @login_required
 def randomMovie():
     currentuser=str(current_user.id)
-    random_movie=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
+    random_movie_title=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
 
     #randy = randy.split(",") 
     #random_movie = randy[0]
 
-    randommovie=Movies.query.filter_by(user_id=int(currentuser), title=str(random_movie.text)).first()
-    return render_template('randomMovie.html',  randommovie= random_movie)
+    random_movie_result=Movies.query.filter_by(user_id=int(currentuser), title=str(random_movie_title.text)).first()
+    return render_template('randomMovie.html', title='randomMovie', randommovie= random_movie_result)
 
 
 
