@@ -12,16 +12,16 @@ import random
 
 @app.route('/randomMaster', methods=['GET', 'POST'])
 def get_randomMaster():
-    #currentuser=str(request.data.decode("utf-8"))
-    currentuser=str(current_user.id)
-    rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
+    current_user=str(request.data.decode("utf-8"))
+    #currentuser=str(current_user.id)
+    rg=requests.post('http://projects_random_genre_1:5000/randomGenre',current_user)
     #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
     random_genre=rg.text
     #movies_genre=Movies.query.filter_by(user_id=current_user.id, genre=random_genre).all()
 
-    rd=requests.post('http://projects_random_director_1:5000/randomDirector',currentuser)
+    rd=requests.post('http://projects_random_director_1:5000/randomDirector',current_user)
     random_director=rd.text
-    random_movies=Movies.query.filter_by(user_id=currentuser, director=random_director, genre=random_genre ).all()
+    random_movies=Movies.query.filter_by(user_id=current_user, director=random_director, genre=random_genre ).all()
     return random_movies
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
