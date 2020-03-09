@@ -21,6 +21,6 @@ def get_randomMovie():
        genres_list = list(dict.fromkeys(genres_list)) #removes duplicates
     
     random_genre = random.choice(genres_list)
-
+    print(11111111111111111111111111111111111111111)
     return random_genre
 #	return "hi"
