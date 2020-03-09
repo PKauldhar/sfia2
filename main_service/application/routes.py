@@ -55,7 +55,7 @@ def randomMovie():
     #random_movie = randy[0]
 
     randommovie=Movies.query.filter_by(user_id=int(currentuser), title=str(random_movie.text)).first()
-    return render_template('randomMovie.html', title='randomMovie', randommovie= random_movie)
+    return render_template('randomMovie.html',  randommovie= random_movie)
 
 
 
