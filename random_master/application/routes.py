@@ -33,7 +33,7 @@ def get_randomMaster():
     #randomised = {'genre': random_genre, 'director': random_director}
     #return random_movies
     randomised=[]
-    for movie in randommovies:
+    for movie in random_movies:
        randomised.append(movie.title)
        randomised.append(movie.genre)
        randomised.append(movie.director)
