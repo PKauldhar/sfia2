@@ -50,7 +50,7 @@ def home():
 def randomMovie():
     currentuser=str(current_user.id)
     random_movies=requests.post('http://projects_random_master_1:5000/randomMaster',currentuser)
-    print(random_movies)
+    #random_movies=Movies.query.filter_by(user_id=current_user, director=random_director, genre=random_genre ).all()
     return render_template('randomMovie.html', title='randomMovie', randommovies=random_movies)
 
 
