@@ -13,11 +13,9 @@ import random
 @app.route('/randomGenre', methods=['GET', 'POST'])
 def get_randomMovie():
     genres_list=[]
-    print(11111111111111111111111111111111111111111111111)
     userid=request.data.decode("utf-8")
     user=int(userid)
     movies=Movies.query.filter_by(user_id=user).all()
-    print(44444444444444444444444444444444444)
     for movie in movies:
        genres_list.append(movie.genre)
        genres_list = list(dict.fromkeys(genres_list)) #removes duplicates

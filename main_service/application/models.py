@@ -27,5 +27,5 @@ class Movies(db.Model):
         date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
         user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
-        #def __repr__(self):
-        #    return ''.join(["User ID: ",self.user_id,"\r\n,""Title: ", self.title,"\r\n","Genre: ", self.genre,"Director:  ",self.director,"\r\n","Rating: ",self.rating])
+        def __repr__(self):
+            return ''.join(["User ID: ",self.user_id,"\r\n,""Title: ", self.title,"\r\n","Genre: ", self.genre,"Director:  ",self.director,"\r\n","Rating: ",self.rating])
