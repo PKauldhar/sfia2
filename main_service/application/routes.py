@@ -57,13 +57,13 @@ def randomMovie():
 
     rd=requests.post('http://projects_random_director_1:5000/randomDirector',currentuser)
     random_director=rd.text
-    random_movie=Movies.query.filter_by(user_id=currentuser, director=random_director, genre=random_genre ).all()
+    random_movies=Movies.query.filter_by(user_id=currentuser, director=random_director, genre=random_genre ).all()
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
 
 
 
-    return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director, randommovie=random_movie)
+    return render_template('randomMovie.html', title='randomMovie', random=random_genre, randDir=random_director, randommovies=random_movies)
 
 
 
