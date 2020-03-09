@@ -14,34 +14,6 @@
 <br>
 
 
-<!-- <div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Director</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% if movies %}
-  {% for movie in movies %}
-      <tr>
-        <td>{{movie.title}}</td>
-        <td>{{movie.genre}}</td>
-        <td>{{movie.director}}</td>
-        <td>{{movie.rating}}</td>
-      </tr>
-    {% endfor %}
-
-    </tbody>
-  </table>
-</div>
-
-  {% endif  %}
--->
-
 {% if not random %}
 <p>There are no movies broo!</p>
 
@@ -59,7 +31,33 @@
 <p>random director</p>
 {{randDir}}
 {% endif %}
-{{randommovie.movie}}
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Director</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% if randommovies %}
+  {% for movie in randommovies %}
+      <tr>
+        <td>{{movie.title}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.rating}}</td>
+      </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+  {% endif  %}
 
 
 {% endblock page_content %}
