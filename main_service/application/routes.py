@@ -60,7 +60,7 @@ def randomMovie():
     random_director=rd.text
 
     #random_movie=Movies.query.filter_by(user_id=current_user.id, rd).all()
-    records = session.query(Movies).filter(movie.director == 'rd').all()
+   # records = session.query(Movies).filter(movie.director == 'rd').all()
     print(filter(and_(Movies.director == 'rd', Movies.genre == 'rg')))
 
 
