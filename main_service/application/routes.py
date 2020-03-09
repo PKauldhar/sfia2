@@ -51,7 +51,7 @@ def randomMovie():
     currentuser=str(current_user.id)
     randy=str(requests.post('http://projects_random_master_1:5000/randomMaster',currentuser).text)
 
-    randy = random_movie.split(",") 
+    randy = randy.split(",") 
     random_movie = randy[0]
 
     #resultrandom_movies=Movies.query.filter_by(user_id=current_user, director=random_movies['director'], genre=random_movies['genre']).all()
