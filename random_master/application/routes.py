@@ -28,13 +28,7 @@ def get_randomMaster():
     rd=requests.post('http://projects_random_director_1:5000/randomDirector',current_user)
     random_director=rd.text
     random_movies=Movies.query.filter_by(user_id=current_user, director=random_director, genre=random_genre ).all()
-    random_movieslist={}
-    for movie in random_movies:
-       random_movieslist[movie.title]=movie.title
-       random_movieslist[movie.genre]=movie.genre
-       random_movieslist[movie.director]=movie.director
-       random_movieslist[movie.rating]=movie.rating
-    return random_movieslist
+    return str(random_movies)
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
 #	return "hi"
