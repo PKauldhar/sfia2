@@ -54,7 +54,7 @@ def randomMovie():
     #randy = randy.split(",") 
     #random_movie = randy[0]
 
-    randommovie=Movies.query.filter_by(user_id=current_user, title=random_movie).first()
+    randommovie=Movies.query.filter_by(user_id=int(currentuser), title=random_movie).first()
     return render_template('randomMovie.html', title='randomMovie', randommovie= random_movie)
 
 
