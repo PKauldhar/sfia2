@@ -13,8 +13,6 @@
 
 <br>
 
-
-
 <div class="container">
   <table class="table">
     <thead>
@@ -27,19 +25,20 @@
     </thead>
     <tbody>
 
+    {% if randommovie %}
+    {% for movie in randommovie %}
       <tr>
-        <td>{{randommovie[title]}}</td>
-        <td>{{randommovie[genre]}}</td>
-        <td>{{randommovie[director]}}</td>
-        <td>{{randommovie[rating]}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.rating}}</td>
       </tr>
-  
+    {% endfor %}
+    {% endif  %}
 
     </tbody>
   </table>
 </div>
-
-
 
 {% endblock page_content %}
  
