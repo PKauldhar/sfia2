@@ -12,7 +12,7 @@ import random
 
 @app.route('/randomMaster', methods=['GET', 'POST'])
 def get_randomMaster():
-    currentuser=request.data.decode("utf-8")
+    currentuser=str(request.data.decode("utf-8"))
 
     rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
     #   rg=requests.post('http://projects_random_genre_1:5000/randomGenre',currentuser)
