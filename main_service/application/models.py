@@ -1,5 +1,5 @@
 
-from application import db, login_manager
+from application import db, login_managerg
 from flask_login import UserMixin
 from datetime import datetime
 
@@ -24,7 +24,7 @@ class Movies(db.Model):
         genre = db.Column(db.String(30), nullable=False)
         director = db.Column(db.String(30), nullable=False)
         rating = db.Column(db.String(1), nullable=False)
-        date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+        date_posted = db.Column(db.DateTime, nullable=True, default=datetime.utcnow)
         user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
         def __repr__(self):
