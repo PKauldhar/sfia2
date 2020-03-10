@@ -1,23 +1,23 @@
-Title,Rating,Genre,Director,,,,,,,,,,
-The Terminator,A,Horror,James Cameron,,,,,,,,,,
-Terminator 2 Judgement Day,A,Action,James Cameron,,,,,,,,,,
-The Invisible Man,A,Horror,Leigh Whannell,,,,,,,,,,
-Blade,A,Horror,Stephen Norrington,,,,,,,,,,
-Blade 2,A,Horror,Guillermo del Toro,,,,,,,,,,
-The Avengers,A,Sci-Fi,Joss Whedon,,,,,,,,,,
-The Evil Dead,A,Horror,Sam Raimi,,,,,,,,,,
-Evil Dead 2,A,Horror,Sam Raimi,,,,,,,,,,
-Army of Darkness,B,Horror,Sam Raimi,,,,,,,,,,
-Joker,A,Thriller,Todd Philips,,,,,,,,,,
-Gremlins,A,Fantasy,Joe Dante,,,,,,,,,,
-Aliens,A,Sci-Fi,James Cameron,,,,,,,,,,
-Predator,A,Sci-Fi,John McTiernan ,,,,,,,,,,
-The Dark Knight,A,Action,Christopher Nolan,,,,,,,,,,
-John Wick,A,Crime,Chad Stahelsk,,,,,,,,,,
-The Lion King,A,Animation,Roger Allers,,,,,,,,,,
-Shutter Island,A,Mystery,Martin Scorsese,,,,,,,,,,
-Goodfellas,A,Crime,Martin Scorsese,,,,,,,,,,
-Casino,A,Crime,Martin Scorsese,,,,,,,,,,
-John Wick 2,A,Crime,Chad Stahelsk,,,,,,,,,,
-John Wick 3,A,Crime,Chad Stahelsk,,,,,,,,,,
-Dragon Ball Super Broly,A,Action,Tatsuya Nagamine,,,,,,,,,,
+Title,Genre,Director,,Rating
+The Terminator,Horror,James Cameron,,A
+Terminator 2 Judgement Day,Action,James Cameron,,A
+The Invisible Man,Horror,Leigh Whannell,,A
+Blade,Horror,Stephen Norrington,,A
+Blade 2,Horror,Guillermo del Toro,,A
+The Avengers,Sci-Fi,Joss Whedon,,A
+The Evil Dead,Horror,Sam Raimi,,A
+Evil Dead 2,Horror,Sam Raimi,,A
+Army of Darkness,Horror,Sam Raimi,,B
+Joker,Thriller,Todd Philips,,A
+Gremlins,Fantasy,Joe Dante,,A
+Aliens,Sci-Fi,James Cameron,,A
+Predator,Sci-Fi,John McTiernan ,,A
+The Dark Knight,Action,Christopher Nolan,,A
+John Wick,Crime,Chad Stahelsk,,A
+The Lion King,Animation,Roger Allers,,A
+Shutter Island,Mystery,Martin Scorsese,,A
+Goodfellas,Crime,Martin Scorsese,,A
+Casino,Crime,Martin Scorsese,,A
+John Wick 2,Crime,Chad Stahelsk,,A
+John Wick 3,Crime,Chad Stahelsk,,A
+Dragon Ball Super Broly,Action,Tatsuya Nagamine,,A
