@@ -2,7 +2,7 @@ from application import db
 from application.models import Movies
 import pandas as pd
 
-db.drop_all()
+#db.drop_all()
 db.create_all()
 
 
