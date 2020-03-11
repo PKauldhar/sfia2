@@ -33,13 +33,20 @@ def get_randomMaster():
     #randomised = {'genre': random_genre, 'director': random_director}
     #return random_movies
     randomised=[]
-    for movie in random_movies:
-       randomised.append(movie.title)
-       randomised = list(dict.fromkeys(randomised))
-    #randomised = {"title":random_movie.title, "genre":random_movie.genre, "director":random_movie.director, "rating":random_movie.rating}
-    #randomised = [random_movie.title, random_movie.genre]
+    if random_movies:
+        for movie in random_movies:
+            randomised.append(movie.title)
+            randomised = list(dict.fromkeys(randomised))
+    else:
+    	random_movies=Movies.query.filter_by(user_id=current_user, director=random_director).all()
+    	for movie in random_movies:
+            randomised.append(movie.title)
+            randomised = list(dict.fromkeys(randomised))
     random_movie = random.choice(randomised)
     return random_movie
+    #randomised = {"title":random_movie.title, "genre":random_movie.genre, "director":random_movie.director, "rating":random_movie.rating}
+    #randomised = [random_movie.title, random_movie.genre]
+    
     
     #records = session.query(Movies).filter(movie.director == 'rd').all()
     #print(filter(and_(Movies.director == random_genre, Movies.genre ==  random_director)))
