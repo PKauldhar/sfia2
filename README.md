@@ -38,7 +38,7 @@ Below you can see two screenshots of my Trello board, I wrote the functionality 
 Risk Assessment:
 
 (Please click on the image to see it clearly)
-<img src="https://i.imgur.com/fCdSd2t.png" />
+<img src="https://i.imgur.com/h7xDO3n.png" />
 
 
 The database remained unchanged so I have just included the ER diagrams from the previous iteration.
@@ -84,7 +84,7 @@ Summary:
 It was something new and challenging for myself to create multiple services that all interacted with one another. Docker is something that is quite new to me as well as Ansible.
 
 
-The Final Product was then deployed to Jenkins and any changes made to my GitHub was automatically carried over to the build on Jenkins:
+The Final Product was then deployed to Jenkins via the use of Ansible also automating Docker and any changes made to my GitHub was automatically carried over to the build on Jenkins:
 (Please click on the image to see it clearly)
 <img src="https://i.imgur.com/lQXtVJK.png" />
 
