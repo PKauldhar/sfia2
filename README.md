@@ -87,6 +87,6 @@ It was something new and challenging for myself to create multiple services that
 
 The Final Product was then deployed to Jenkins via the use of Ansible also automating Docker and any changes made to my GitHub was automatically carried over to the build on Jenkins:
 (Please click on the image to see it clearly)
-<img src="https://i.imgur.com/lQXtVJK.png" />
+<img src="https://i.imgur.com/zEocnfy.png" />
 
 
