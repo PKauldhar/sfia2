@@ -78,6 +78,7 @@ Improvements:
 •	Allow the user to send an aggregated list based on genre and personal rating via email.
 •	Allow users to get ratings from online movie databases like IMDB and/or Rotten Tomatoes.
 •	More complicated database so for example many genres for one movie as well as thinking of a way to included actor information and more.
+•	Add a service for release dates instead, go by the year the film was created and query it by that rather than the director.
 
 
 Summary:
