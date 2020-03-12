@@ -1,0 +1,52 @@
+
+version: "3.7"
+services:
+   main_service:
+     image: 127.0.0.1:5000/main_service
+     build: ./main_service
+     ports:
+     - target: 5000
+       published: 5000
+     environment:
+     - DATABASE_URI=mysql+pymysql://root:1234567@database/movies
+     - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
+   random_genre:
+     image: 127.0.0.1:5000/random_genre
+     build: ./random_genre
+     ports:
+     - target: 5000
+       published: 5001
+     environment:
+     - DATABASE_URI=mysql+pymysql://root:1234567@database/movies
+     - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
+   random_director:
+     image: 127.0.0.1:5000/random_director
+     build: ./random_director
+     ports:
+     - target: 5000
+       published: 5002
+     environment:
+     - DATABASE_URI=mysql+pymysql://root:1234567@database/movies
+     - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
+   random_master:
+     image: 127.0.0.1:5000/random_master
+     build: ./random_master
+     ports:
+     - target: 5000
+       published: 5003
+     environment:
+     - DATABASE_URI=mysql+pymysql://root:1234567@database/movies
+     - SECRET_KEY='7218a9143c27c16610765205a1b21cb7'
+
+   database:
+     image: mysql:5.7
+     ports:
+     - target: 3306
+       published: 3306
+     environment:
+     - MYSQL_ROOT_PASSWORD=1234567
+     - MYSQL_DATABASE=movies
+
+
+
+
